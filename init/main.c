@@ -9,6 +9,8 @@
  *  Simplified starting of init:  Michael A. Griffith <grif@acm.org> 
  */
 
+/* Changed to print startup message Derick Beckwith 12 MAR 2014 */
+
 #define DEBUG		/* Enable initcall_debug */
 
 #include <linux/types.h>
