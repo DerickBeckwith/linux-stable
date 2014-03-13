@@ -562,12 +562,11 @@ struct sched_entity *__pick_first_entity(struct cfs_rq *cfs_rq)
 	struct rb_node *left = cfs_rq->rb_leftmost;
 
 	/* 12 MAR 2014 DERICK BECKWITH print a msg every 10,000th time called */
+	print_count++;
+
 	if (print_count >= 1000) {
 		printk("\n ***** 10,000th Time Through __pick_first_entity\n");
 		print_count = 0;
-	}
-	else {
-		print_count++;
 	}
 
 	if (!left)
