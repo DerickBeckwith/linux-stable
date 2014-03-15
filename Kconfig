@@ -9,3 +9,8 @@ config SRCARCH
 	option env="SRCARCH"
 
 source "arch/$SRCARCH/Kconfig"
+
+config SCHED_WFB
+	bool "WFB cpu scheduler"
+	---help---
+	  Brand new scheduler
