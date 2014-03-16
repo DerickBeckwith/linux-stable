@@ -33,11 +33,6 @@
 #include <trace/events/sched.h>
 
 #include "sched.h"
-/* 12 MAR 2014 Attempt to test printing every 10,000th time an entity to
- * schedule is chosen.  Derick Beckwith
- */
-
-unsigned int print_count = 0;
 
 /*
  * Targeted preemption latency for CPU-bound tasks:
@@ -560,14 +555,6 @@ static void __dequeue_entity(struct cfs_rq *cfs_rq, struct sched_entity *se)
 struct sched_entity *__pick_first_entity(struct cfs_rq *cfs_rq)
 {
 	struct rb_node *left = cfs_rq->rb_leftmost;
-
-	/* 12 MAR 2014 DERICK BECKWITH print a msg every 10,000th time called */
-	print_count++;
-
-	if (print_count >= 1000) {
-		printk("\n ***** 10,000th Time Through __pick_first_entity\n");
-		print_count = 0;
-	}
 
 	if (!left)
 		return NULL;

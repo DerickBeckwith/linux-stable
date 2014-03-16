@@ -9,8 +9,6 @@
  *  Simplified starting of init:  Michael A. Griffith <grif@acm.org> 
  */
 
-/* Changed to print startup message Derick Beckwith 12 MAR 2014 */
-
 #define DEBUG		/* Enable initcall_debug */
 
 #include <linux/types.h>
@@ -508,9 +506,6 @@ asmlinkage void __init start_kernel(void)
 	boot_cpu_init();
 	page_address_init();
 	pr_notice("%s", linux_banner);
-	/* 6 MAR 2014 Derick Beckwith test of printk */
-	pr_notice("%s", "Linux Kernel Modification Test Derick Beckwith 6 MAR 2014");
-	printk("\nPrintk test\n");
 	setup_arch(&command_line);
 	mm_init_owner(&init_mm, &init_task);
 	mm_init_cpumask(&init_mm);
