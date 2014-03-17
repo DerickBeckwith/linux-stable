@@ -1983,7 +1983,11 @@ static unsigned int get_rr_interval_rt(struct rq *rq, struct task_struct *task)
 }
 
 const struct sched_class rt_sched_class = {
+#ifdef CONFIG_SCHED_WFB
+	.next			= &wfb_sched_class,
+#else
 	.next			= &fair_sched_class,
+#endif /* CONFIG_SCHED_WFB */
 	.enqueue_task		= enqueue_task_rt,
 	.dequeue_task		= dequeue_task_rt,
 	.yield_task		= yield_task_rt,
