@@ -3,6 +3,10 @@
  * policies)
  */
 
+/* 16 MAR 2014 Derick Beckwith
+ * Added check for the wfb scheduler
+ */
+
 #include "sched.h"
 
 #include <linux/slab.h>

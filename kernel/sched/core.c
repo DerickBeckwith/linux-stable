@@ -3271,6 +3271,10 @@ static bool check_same_owner(struct task_struct *p)
 	return match;
 }
 
+/*
+ * 16 MAR 2014 Derick Beckwith
+ * Added check for SCHED_WFB
+ */
 static int __sched_setscheduler(struct task_struct *p,
 				const struct sched_attr *attr,
 				bool user)

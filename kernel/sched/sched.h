@@ -95,6 +95,10 @@ static inline int fair_policy(int policy)
 	return policy == SCHED_NORMAL || policy == SCHED_BATCH;
 }
 
+/*
+ * 16 MAR 2014 Derick Beckwith
+ * Added SCHED_WFB as one of the rt policies.
+ */
 static inline int rt_policy(int policy)
 {
 	return policy == SCHED_FIFO || policy == SCHED_RR || policy == SCHED_WFB;

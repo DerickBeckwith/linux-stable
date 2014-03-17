@@ -10,6 +10,10 @@ config SRCARCH
 
 source "arch/$SRCARCH/Kconfig"
 
+# 
+# 16 MAR 2014 Derick Beckwith
+# Include the WFB scheduler in the build
+#
 config SCHED_WFB
 	bool "WFB cpu scheduler"
 	---help---

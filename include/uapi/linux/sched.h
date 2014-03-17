@@ -37,6 +37,9 @@
 #define SCHED_FIFO		1
 #define SCHED_RR		2
 #define SCHED_BATCH		3
+/* 16 MAR 2014 Derick Beckwith
+ * Added constant for the WFB scheduling policy
+ */
 #define SCHED_WFB		4
 /* SCHED_ISO: reserved but not implemented yet */
 #define SCHED_IDLE		5

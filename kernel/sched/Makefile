@@ -13,6 +13,8 @@ endif
 
 obj-y += core.o proc.o clock.o cputime.o
 obj-y += idle_task.o fair.o rt.o deadline.o stop_task.o
+# 16 MAR 2014 Derick Beckwith
+# Added wfb.o
 obj-y += wait.o completion.o wfb.o
 obj-$(CONFIG_SMP) += cpupri.o cpudeadline.o
 obj-$(CONFIG_SCHED_AUTOGROUP) += auto_group.o
