@@ -1,6 +1,6 @@
 /*
  * WFB Scheduling Class - implementation copied from the real-time scheduler
- * MAR 16 2014 Derick Beckwith
+ * 16 MAR 2014 Derick Beckwith
  */
 #ifdef CONFIG_SCHED_WFB
 
