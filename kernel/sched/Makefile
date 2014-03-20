@@ -1,3 +1,5 @@
+# 16 MAR 2014 Derick Beckwith
+# Added wfb.o
 ifdef CONFIG_FUNCTION_TRACER
 CFLAGS_REMOVE_clock.o = -pg
 endif

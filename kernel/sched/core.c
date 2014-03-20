@@ -24,6 +24,8 @@
  *  2007-07-01  Group scheduling enhancements by Srivatsa Vaddagiri
  *  2007-11-29  RT balancing improvements by Steven Rostedt, Gregory Haskins,
  *              Thomas Gleixner, Mike Kravetz
+ *  16 MAR 2014 Derick Beckwith
+ *  Added check for SCHED_WFB
  */
 
 #include <linux/mm.h>
@@ -3271,10 +3273,6 @@ static bool check_same_owner(struct task_struct *p)
 	return match;
 }
 
-/*
- * 16 MAR 2014 Derick Beckwith
- * Added check for SCHED_WFB
- */
 static int __sched_setscheduler(struct task_struct *p,
 				const struct sched_attr *attr,
 				bool user)
@@ -3296,6 +3294,10 @@ recheck:
 	} else {
 		reset_on_fork = !!(attr->sched_flags & SCHED_FLAG_RESET_ON_FORK);
 
+		/*
+		 * 16 MAR 2014 Derick Beckwith
+		 * Added check for SCHED_WFB
+		 */
 		if (policy != SCHED_DEADLINE &&
 				policy != SCHED_FIFO && policy != SCHED_RR &&
 				policy != SCHED_NORMAL && policy != SCHED_BATCH &&

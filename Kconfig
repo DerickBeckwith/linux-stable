@@ -1,4 +1,7 @@
 #
+# 16 MAR 2014 Derick Beckwith
+# Include the WFB scheduler in the build
+#
 # For a description of the syntax of this configuration file,
 # see Documentation/kbuild/kconfig-language.txt.
 #

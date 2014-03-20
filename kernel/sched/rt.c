@@ -1986,6 +1986,9 @@ static unsigned int get_rr_interval_rt(struct rq *rq, struct task_struct *task)
 		return 0;
 }
 
+/* 16 MAR 2014 Derick Beckwith
+ * Added check for the wfb scheduler
+ */
 const struct sched_class rt_sched_class = {
 #ifdef CONFIG_SCHED_WFB
 	.next			= &wfb_sched_class,

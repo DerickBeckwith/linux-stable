@@ -1,3 +1,7 @@
+/* 16 MAR 2014 Derick Beckwith
+ * Added constant for the WFB scheduling policy
+ */
+
 #ifndef _UAPI_LINUX_SCHED_H
 #define _UAPI_LINUX_SCHED_H
 
