@@ -1,4 +1,7 @@
 #
+# 17 APR 2014 Derick Beckwith Lab2
+# Add new system call comp7506.o to build.
+#
 # Makefile for the linux kernel.
 #
 

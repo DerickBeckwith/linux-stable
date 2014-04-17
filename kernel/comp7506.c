@@ -1,3 +1,8 @@
+/*
+ * 17 APR 2014 Derick Beckwith Lab2
+ * Add a new system call named comp7506.
+ */
+
 #include <linux/syscalls.h>
 #include <linux/printk.h>
 
