@@ -1,4 +1,7 @@
 #
+# 17 APR 2014 Derick Beckwith Lab2
+# Add new system call comp7506.o to build.
+#
 # Makefile for the linux kernel.
 #
 
@@ -10,7 +13,7 @@ obj-y     = fork.o exec_domain.o panic.o \
 	    kthread.o sys_ni.o posix-cpu-timers.o \
 	    hrtimer.o nsproxy.o \
 	    notifier.o ksysfs.o cred.o reboot.o \
-	    async.o range.o groups.o smpboot.o
+	    async.o range.o groups.o smpboot.o comp7506.o
 
 ifdef CONFIG_FUNCTION_TRACER
 # Do not trace debug files and internal ftrace files
